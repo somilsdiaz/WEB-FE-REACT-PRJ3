@@ -59,7 +59,7 @@ const FollowUpsTable = () => {
     setError(null);
 
     try {
-      const response = await fetch("https://web-fe-react-prj3-api.onrender.com/follow");
+      const response = await fetch("https://web-fe-react-prj3-api-lebw.onrender.com/follow");
       if (!response.ok) {
         throw new Error(`Error al obtener los seguimientos: ${response.statusText}`);
       }
@@ -103,7 +103,7 @@ const FollowUpsTable = () => {
 
       // Enviar la actualización al servidor
       const response = await fetch(
-        `https://web-fe-react-prj3-api.onrender.com/follow/${followUpId}`,
+        `https://web-fe-react-prj3-api-lebw.onrender.com/follow/${followUpId}`,
         {
           method: "PUT",
           headers: {

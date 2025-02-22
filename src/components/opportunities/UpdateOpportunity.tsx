@@ -122,7 +122,7 @@ const UpdateOpportunity: React.FC<UpdateOpportunityProps> = ({ opportunity, onCl
       };
   
       // Enviar la solicitud de actualización
-      const response = await fetch(`https://web-fe-react-prj3-api.onrender.com/opportunities/${opportunity.id}`, {
+      const response = await fetch(`https://web-fe-react-prj3-api-lebw.onrender.com/opportunities/${opportunity.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

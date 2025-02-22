@@ -25,8 +25,8 @@ export function KeyMetrics() {
     async function fetchMetrics() {
       try {
         const [clientsResponse, opportunitiesResponse] = await Promise.all([
-          fetch("https://web-fe-react-prj3-api.onrender.com/clients"),
-          fetch("https://web-fe-react-prj3-api.onrender.com/opportunities"),
+          fetch("https://web-fe-react-prj3-api-lebw.onrender.com/clients"),
+          fetch("https://web-fe-react-prj3-api-lebw.onrender.com/opportunities"),
         ]);
 
         const clients: Client[] = await clientsResponse.json();

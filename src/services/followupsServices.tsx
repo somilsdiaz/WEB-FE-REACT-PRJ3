@@ -1,6 +1,6 @@
 import { FollowUpActivity } from "../types/followups";
 
-const API_URL = "https://web-fe-react-prj3-api.onrender.com";
+const API_URL = "https://web-fe-react-prj3-api-lebw.onrender.com";
 
 export const createFollowUp = async (followUp: FollowUpActivity): Promise<FollowUpActivity> => {
     const response = await fetch(`${API_URL}/follow-ups`, {

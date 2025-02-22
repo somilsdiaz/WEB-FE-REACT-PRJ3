@@ -64,7 +64,7 @@ const ClientDetails: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch('https://web-fe-react-prj3-api.onrender.com/clients');
+        const response = await fetch('https://web-fe-react-prj3-api-lebw.onrender.com/clients');
         const data = await response.json();
         setClients(Array.isArray(data) ? data : [data]);
       } catch (error) {
@@ -76,7 +76,7 @@ const ClientDetails: React.FC = () => {
     };
 
     const fetchOpportunities = async () => {
-      const response = await fetch('https://web-fe-react-prj3-api.onrender.com/opportunities');
+      const response = await fetch('https://web-fe-react-prj3-api-lebw.onrender.com/opportunities');
       const data = await response.json();
       setOpportunities(data);
     };

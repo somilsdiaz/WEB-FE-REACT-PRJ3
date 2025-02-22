@@ -115,7 +115,7 @@ const UpdateFollowUp: React.FC<UpdateFollowUpProps> = ({
       };
 
       const response = await fetch(
-        `https://web-fe-react-prj3-api.onrender.com/follow/${followUp.id}`,
+        `https://web-fe-react-prj3-api-lebw.onrender.com/follow/${followUp.id}`,
         {
           method: "PUT",
           headers: {

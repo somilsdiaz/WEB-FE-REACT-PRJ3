@@ -41,7 +41,7 @@ const OpportunitiesTable = () => {
 
   const fetchOpportunities = async () => {
     try {
-      const response = await fetch('https://web-fe-react-prj3-api.onrender.com/opportunities');
+      const response = await fetch('https://web-fe-react-prj3-api-lebw.onrender.com/opportunities');
       if (!response.ok) {
         throw new Error(`Error al obtener las oportunidades: ${response.statusText}`);
       }
@@ -67,7 +67,7 @@ const OpportunitiesTable = () => {
 
   const handleDeleteOpportunity = async (id: string) => {
     try {
-      const response = await fetch(`https://web-fe-react-prj3-api.onrender.com/opportunities/${id}`, {
+      const response = await fetch(`https://web-fe-react-prj3-api-lebw.onrender.com/opportunities/${id}`, {
         method: 'DELETE',
       });
   
@@ -145,7 +145,7 @@ const OpportunitiesTable = () => {
   const handleOpportunityUpdate = async (updatedOpportunity: Opportunity) => {
 
     try {
-      const response = await fetch(`https://web-fe-react-prj3-api.onrender.com/opportunities/${updatedOpportunity.id}`, {
+      const response = await fetch(`https://web-fe-react-prj3-api-lebw.onrender.com/opportunities/${updatedOpportunity.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedOpportunity),

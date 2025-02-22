@@ -4,7 +4,7 @@ import { Opportunities } from "../types/opportunities";
 import { ContactType } from "../types/clients";
 import axios from 'axios';
 
-const API_URL = 'https://web-fe-react-prj3-api.onrender.com';
+const API_URL = 'https://web-fe-react-prj3-api-lebw.onrender.com';
 
 export const fetchClients = async (): Promise<ClientType[]> => {
   try {

@@ -57,7 +57,7 @@ const ClientsTable = () => {
 
   const fetchClients = async () => {
     try {
-      const response = await fetch('https://web-fe-react-prj3-api.onrender.com/clients');
+      const response = await fetch('https://web-fe-react-prj3-api-lebw.onrender.com/clients');
       if (!response.ok) {
         throw new Error(`Error al obtener los clientes: ${response.status}`);
       }
@@ -92,7 +92,7 @@ const ClientsTable = () => {
 
       console.log('Enviando actualización:', clientToUpdate);
 
-      const response = await fetch(`https://web-fe-react-prj3-api.onrender.com/clients/${clientId}`, {
+      const response = await fetch(`https://web-fe-react-prj3-api-lebw.onrender.com/clients/${clientId}`, {
         method: 'PUT',  
         headers: {
           'Content-Type': 'application/json',
@@ -159,7 +159,7 @@ const ClientsTable = () => {
     setUpdateError(null);
 
     try {
-      const response = await fetch(`https://web-fe-react-prj3-api.onrender.com/clients/${updatedClient.id}`, {
+      const response = await fetch(`https://web-fe-react-prj3-api-lebw.onrender.com/clients/${updatedClient.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedClient),

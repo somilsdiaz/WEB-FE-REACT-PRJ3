@@ -39,7 +39,7 @@ const CreateFollowUpModal: React.FC<CreateFollowUpModalProps> = ({
           // Función para buscar el nombre de la oportunidad
     useEffect(() => {
         if (isOpen && opportunityId) {
-            fetch(`https://web-fe-react-prj3-api.onrender.com/opportunities/${opportunityId}`)
+            fetch(`https://web-fe-react-prj3-api-lebw.onrender.com/opportunities/${opportunityId}`)
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error('Error al cargar la oportunidad');
@@ -124,7 +124,7 @@ const CreateFollowUpModal: React.FC<CreateFollowUpModalProps> = ({
         };
 
         // Enviar datos al backend
-        fetch('https://web-fe-react-prj3-api.onrender.com/follow', {
+        fetch('https://web-fe-react-prj3-api-lebw.onrender.com/follow', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(followUpData),

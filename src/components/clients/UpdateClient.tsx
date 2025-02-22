@@ -54,7 +54,7 @@ const UpdateClient: React.FC<UpdateClientProps> = ({ client, onClose, onUpdate }
   
     try {
       // Cambiar el método a PUT para actualizar el cliente
-      const response = await fetch(`https://web-fe-react-prj3-api.onrender.com/clients/${client.id}`, {
+      const response = await fetch(`https://web-fe-react-prj3-api-lebw.onrender.com/clients/${client.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

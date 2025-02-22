@@ -12,7 +12,7 @@ const BusinessLinePieChart = () => {
 
   useEffect(() => {
     axios
-      .get("https://web-fe-react-prj3-api.onrender.com/opportunities")
+      .get("https://web-fe-react-prj3-api-lebw.onrender.com/opportunities")
       .then((response) => {
         const opportunities = response.data;
         const groupedData = opportunities.reduce(

@@ -39,7 +39,7 @@ const CreateFollowUpModal: React.FC<CreateFollowUpModalProps> = ({ isOpen, onClo
     const [error, setError] = useState('');
 
     useEffect(() => {
-        fetch('https://web-fe-react-prj3-api.onrender.com/opportunities')
+        fetch('https://web-fe-react-prj3-api-lebw.onrender.com/opportunities')
             .then((response) => response.json())
             .then((data: Opportunity[]) => setOpportunities(data));
     }, []);
@@ -91,7 +91,7 @@ const CreateFollowUpModal: React.FC<CreateFollowUpModalProps> = ({ isOpen, onClo
             followUpActivities: [newActivity],
         };
 
-        fetch('https://web-fe-react-prj3-api.onrender.com/follow', {
+        fetch('https://web-fe-react-prj3-api-lebw.onrender.com/follow', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(followUpData),

@@ -40,7 +40,7 @@ const ClientDetailLow: React.FC<ClientDetailLowProps> = ({ opportunity, onClose 
 
     const fetchFollowUps = async () => {
         try {
-          const response = await fetch(`https://web-fe-react-prj3-api.onrender.com/follow`);
+          const response = await fetch(`https://web-fe-react-prj3-api-lebw.onrender.com/follow`);
           const data = await response.json();
       
           // Filtrar todos los elementos que coinciden con el opportunityId

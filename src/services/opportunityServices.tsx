@@ -1,6 +1,6 @@
 import { Opportunities } from "../types/opportunities";
 
-const API_URL = "https://web-fe-react-prj3-api.onrender.com";
+const API_URL = "https://web-fe-react-prj3-api-lebw.onrender.com";
 
 export const createOpportunity = async (opportunity: Opportunities) => {
   const response = await fetch(`${API_URL}/opportunities`, {
