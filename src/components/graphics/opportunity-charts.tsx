@@ -14,18 +14,48 @@ const businessLineData = [
   { name: "Desarrollo mobile", value: 25, color: "#FF7043" },
 ]
 
+
+const COLORS = [
+  "linear-gradient(90deg, #2196F3, #00E5B1)",
+  "linear-gradient(90deg, #FFB74D, #FF7043)",
+  "linear-gradient(90deg, #8884d8, #82ca9d)",
+  "linear-gradient(90deg, #FF6384, #FF9F40)",
+];// Custom Tooltip Component
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-white p-2 border rounded shadow">
-        <p className="font-semibold">{`${payload[0].name} : ${payload[0].value}%`}</p>
+      <div className="custom-tooltip bg-white shadow-lg p-4 rounded-lg border border-gray-200">
+        <p className="label text-lg font-bold">{`${payload[0].name}`}</p>
+        <p className="value text-gray-600">{`Count: ${payload[0].value}`}</p>
+        <p className="percent text-gray-600">{`Percentage: ${(payload[0].payload.percent * 100).toFixed(2)}%`}</p>
       </div>
     );
   }
   return null;
 };
+  // Interactive Legend
+  const renderLegend = (props: any) => {
+    const { payload } = props;
+    return (
+      <ul className="flex flex-wrap justify-center gap-4 mt-4">
+        {payload.map((entry: any, index: number) => (
+          <li
+            key={`legend-item-${index}`}
+            className="flex items-center cursor-pointer"
+          >
+            <span
+              className="w-4 h-4 rounded-full mr-2"
+              style={{ background: COLORS[index % COLORS.length] }}
+            ></span>
+            <span className="text-sm font-medium">{entry.value}</span>
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
 export function OpportunityCharts() {
+
   return (
     <>
       <Card className="col-span-2">
@@ -50,7 +80,7 @@ export function OpportunityCharts() {
                 ))}
               </Pie>
               <Tooltip content={<CustomTooltip />} />
-              <Legend />
+              <Legend content={renderLegend} />
             </PieChart>
           </ResponsiveContainer>
         </CardContent>
@@ -77,7 +107,7 @@ export function OpportunityCharts() {
                 ))}
               </Pie>
               <Tooltip content={<CustomTooltip />} />
-              <Legend />
+              <Legend content={renderLegend} />
             </PieChart>
           </ResponsiveContainer>
         </CardContent>

@@ -1,9 +1,7 @@
-import StatusPieChart from "../components/graphics/StatusPieChart";
-import BusinessLinePieChart from "../components/graphics/BusinessLinePieChart";
 import MainLayout from "../layouts/MainLayout";
 import { KeyMetrics } from "../components/graphics/key-metrics"
 import { Barchart } from "../components/graphics/Barchart";
-
+import { OpportunityCharts } from "@/components/graphics/opportunity-charts";
 const Dashboard = () => {
   return (
     <MainLayout>
@@ -13,9 +11,8 @@ const Dashboard = () => {
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Dashboard</h2>
             <KeyMetrics />
             <Barchart />
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-              <StatusPieChart />
-              <BusinessLinePieChart />
+            <div className="grid gap-6 md:grid-flow-col grid-flow-row ">
+              <OpportunityCharts />
             </div>
           </main>
           </div>
