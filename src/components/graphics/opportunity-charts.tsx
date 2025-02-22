@@ -26,8 +26,7 @@ const CustomTooltip = ({ active, payload }: any) => {
     return (
       <div className="custom-tooltip bg-white shadow-lg p-4 rounded-lg border border-gray-200">
         <p className="label text-lg font-bold">{`${payload[0].name}`}</p>
-        <p className="value text-gray-600">{`Count: ${payload[0].value}`}</p>
-        <p className="percent text-gray-600">{`Percentage: ${(payload[0].payload.percent * 100).toFixed(2)}%`}</p>
+        <p className="value text-gray-600">{`Porcentaje: ${payload[0].value}%`}</p>
       </div>
     );
   }
