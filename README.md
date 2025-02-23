@@ -1,6 +1,6 @@
 # CRM Pro - Customer Relationship Management System
 
-A modern, responsive and feature-rich CRM system built with React, TypeScript and Vite.
+CRM Pro is a modern, responsive web application built with React, TypeScript, and Vite for efficient client relationship management. The system provides comprehensive tools for managing clients, tracking opportunities, and monitoring follow-up activities.
 
 ## Screenshots
 
@@ -66,11 +66,14 @@ _Below are screenshots of key sections of the application:_
 - **Routing:** React Router
 - **HTTP Client:** Axios
 
-## API Description
+## API Integration
 
-The Mock API serves as a simulated backend, providing structured data for the frontend. The data includes Clients, Opportunities, Follow-up Activities [API repository](https://github.com/somilsdiaz/WEB-FE-REACT-PRJ3-API). These data points are organized in JSON objects to facilitate integration with React components and are accessible at the following 
+The application integrates with a backend API  ([API repository](https://github.com/somilsdiaz/WEB-FE-REACT-PRJ3-API)) for data persistence. The API endpoints are configured in the services directory:
 
----
+- `clientServices.tsx`: Client management operations
+- `opportunityServices.tsx`: Opportunity management
+- `followupsServices.tsx`: Follow-up activities
+
 ## Installation
 
 1.  **Clone the repository:**
