@@ -2,6 +2,8 @@
 
 CRM Pro is a modern, responsive web application built with React, TypeScript, and Vite for efficient client relationship management. The system provides comprehensive tools for managing clients, tracking opportunities, and monitoring follow-up activities.
 
+> Project deployed here: https://web-fe-react-prj3-xgdi.onrender.com/
+
 ## Screenshots
 
 _Below are screenshots of key sections of the application:_
